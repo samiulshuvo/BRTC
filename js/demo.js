@@ -1,0 +1,51 @@
+/* Synthetic demo data (invented names and numbers) so the page opens with something to look at. */
+window.BRTC_DEMO = {
+  config: {
+    title: 'Demo department, sample period',
+    rates: {
+      workTypes: [
+        { name: 'Test', buetDeduction: 0.3, nonTeachingShare: 0.12 },
+        { name: 'Consultancy', buetDeduction: 0.195, nonTeachingShare: 0.06 },
+      ],
+      other: { buetDeduction: 0.195, nonTeachingShare: 0.06 },
+      headAccount: 0.05,
+      commonPoolShare: 0.5,
+      nonTeachingCommonShare: 0.5,
+      headWF: 2.25,
+      headStatus: 'Head',
+      brtcTax: 0.15,
+    },
+    faculty: [
+      { id: 'f1', name: 'Prof. Alpha', wf: 1, inCommon: true, inTeam: true, commonFrom: 1, aliases: 'Alpha' },
+      { id: 'f2', name: 'Prof. Beta', wf: 1, inCommon: true, inTeam: true, commonFrom: 1, aliases: 'Beta' },
+      { id: 'f3', name: 'Dr. Gamma', wf: 0.9, inCommon: true, inTeam: true, commonFrom: 1, aliases: 'Gamma' },
+      { id: 'f4', name: 'Ms. Delta', wf: 0.7, inCommon: false, inTeam: true, commonFrom: 1, aliases: 'Delta' },
+      { id: 'f5', name: 'Dr. Epsilon', wf: 0.8, inCommon: true, inTeam: true, commonFrom: 1, aliases: 'Epsilon' },
+      { id: 'f6', name: 'Dr. Zeta', wf: 0.8, inCommon: true, inTeam: true, commonFrom: 1, aliases: 'Zeta' },
+    ],
+    staff: [
+      { id: 's1', name: 'Maintenance engineer', wf: 0.5, commonFrom: 1, aliases: '' },
+      { id: 's2', name: 'Lab officer 1', wf: 0.4, commonFrom: 1, aliases: '' },
+      { id: 's3', name: 'Lab officer 2', wf: 0.4, commonFrom: 1, aliases: '' },
+      { id: 's4', name: 'Administrative officer', wf: 0.3, commonFrom: 1, aliases: '' },
+      { id: 's5', name: 'Accountant', wf: 0.3, commonFrom: 1, aliases: '' },
+      { id: 's6', name: 'Lab attendant 1', wf: 0.25, commonFrom: 1, aliases: '' },
+      { id: 's7', name: 'Lab attendant 2', wf: 0.25, commonFrom: 3, aliases: '' },
+      { id: 's8', name: 'Cleaner', wf: 0.2, commonFrom: 1, aliases: '' },
+    ],
+  },
+  projects: [
+    { date: '2025-11-02', client: 'Client A', details: 'Sample test', workType: 'Test', bmeRef: 'B-001', brtcRef: 'R-1001', amount: 30000, vat: 3913, expense: 10000,
+      status: { f1: 'Head', f2: 'PC', f3: 'APC' }, count: { f1: 0, f2: 0, f3: 1, f4: 1, f5: 0, f6: 0, s1: 1, s2: 0, s3: 1, s4: 0.2, s5: 0.2, s6: 0.1, s7: 0, s8: 1 } },
+    { date: '2025-11-11', client: 'Client B', details: 'Spectroscopy', workType: 'Test', bmeRef: 'B-002', brtcRef: 'R-1002', amount: 2000, vat: 261, expense: 0,
+      status: { f1: 'PC+PT', f2: 'PC', f3: 'APC' }, count: { f1: 1, f2: 0, f3: 0, f4: 0, f5: 1, f6: 0, s1: 0, s2: 1, s3: 0, s4: 0.2, s5: 0, s6: 0.1, s7: 0.1, s8: 0 } },
+    { date: '2025-12-11', client: 'Client C', details: 'Material test', workType: 'Test', bmeRef: 'B-003', brtcRef: 'R-1003', amount: 16550, vat: 2159, expense: 0,
+      status: { f1: 'Head', f2: 'PC', f3: 'APC+APT' }, count: { f1: 0, f2: 0, f3: 1, f4: 1, f5: 0, f6: 0, s1: 1, s2: 0, s3: 1, s4: 0.2, s5: 0.2, s6: 0.1, s7: 0.1, s8: 1 } },
+    { date: '2026-01-13', client: 'Client D', details: 'Consultancy', workType: 'Consultancy', bmeRef: 'B-004', brtcRef: 'R-1004', amount: 50000, vat: 6521, expense: 5000,
+      status: { f1: 'PC+PT', f2: 'Head', f3: 'APC+APT' }, count: { f1: 1, f2: 0, f3: 1, f4: 0, f5: 1, f6: 1, s1: 1, s2: 0, s3: 0, s4: 0.2, s5: 0.2, s6: 0, s7: 0.1, s8: 0 } },
+    { date: '2026-01-18', client: 'Client E', details: 'Dialysis test', workType: 'Test', bmeRef: 'B-005', brtcRef: 'R-1005', amount: 44000, vat: 5739, expense: 25000,
+      status: { f1: 'PC', f2: 'Head', f3: 'APC+APT' }, count: { f1: 0, f2: 0, f3: 1, f4: 1, f5: 0, f6: 0, s1: 0, s2: 1, s3: 0, s4: 0.2, s5: 0.2, s6: 0.1, s7: 0.1, s8: 1 } },
+    { date: '2026-02-16', client: 'Client F', details: 'FTIR', workType: 'Test', bmeRef: 'B-006', brtcRef: 'R-1006', amount: 2000, vat: 261, expense: 0,
+      status: { f1: 'PC+PT', f2: 'Head', f3: 'APC' }, count: { f1: 1, f2: 0, f3: 0, f4: 0, f5: 0, f6: 1, s1: 0, s2: 0, s3: 1, s4: 0.2, s5: 0, s6: 0.1, s7: 0.1, s8: 0 } },
+  ],
+};

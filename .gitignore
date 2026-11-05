@@ -1,0 +1,6 @@
+node_modules/
+*.private.json
+extracted*.json
+mutant*.json
+local/
+.DS_Store

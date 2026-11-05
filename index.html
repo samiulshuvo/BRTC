@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRTC Calculator</title>
+  <meta name="description" content="Departmental BRTC test and consultancy income distribution calculator. Runs entirely in the browser.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-row">
+      <h1>BRTC Distribution Calculator</h1>
+      <span class="sub">Runs in your browser. Nothing is uploaded; data is kept only on this device.</span>
+    </div>
+    <nav role="tablist" aria-label="Sections">
+      <button role="tab" id="t-projects" aria-selected="true" aria-controls="tab-projects" data-tab="projects">1. Projects</button>
+      <button role="tab" id="t-people" aria-selected="false" aria-controls="tab-people" data-tab="people">2. People &amp; rates</button>
+      <button role="tab" id="t-results" aria-selected="false" aria-controls="tab-results" data-tab="results">3. Results</button>
+      <button role="tab" id="t-data" aria-selected="false" aria-controls="tab-data" data-tab="data">4. Import / export</button>
+    </nav>
+    <div id="bar" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <div id="demo-banner" class="banner" hidden>This is invented demo data. Replace it in <b>Import / export</b> (load your workbook) or edit the tables directly.</div>
+
+    <section class="tab" id="tab-projects" role="tabpanel" aria-labelledby="t-projects"></section>
+    <section class="tab" id="tab-people" role="tabpanel" aria-labelledby="t-people" hidden></section>
+    <section class="tab" id="tab-results" role="tabpanel" aria-labelledby="t-results" hidden></section>
+    <section class="tab" id="tab-data" role="tabpanel" aria-labelledby="t-data" hidden></section>
+  </main>
+
+  <footer>
+    The arithmetic mirrors the departmental BRTC workbook (order of operations and rounding).
+    Always compare the totals with your own records before paying anyone.
+  </footer>
+
+  <datalist id="dl-types"></datalist>
+  <datalist id="dl-status"><option value="Head"><option value="PC"><option value="APC"><option value="PC+PT"><option value="APC+APT"></datalist>
+
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/io.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
