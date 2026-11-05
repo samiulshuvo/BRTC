@@ -9,9 +9,9 @@ It is a plain static site (HTML, CSS, JavaScript). There is no server and nothin
 
 Open `index.html`, or the GitHub Pages address of this repository.
 
-1. **People & rates**: set the weighting factors (WF) of each person, the rates for each work type, and the head account share. The page opens with invented demo data.
-2. **Projects**: one row per BRTC payment (amount, VAT, expenses, who worked on it). Or use **Import / export** to load the Google Form response sheet (`.xlsx`/`.csv`) or paste rows from a spreadsheet.
-3. **Results**: amount per person, the split of every payment, and the per-person-per-project tables. Print it or download it as Excel.
+1. **People & rates**: set the weighting factors (WF) of each person (pick a position or type your own), the rates for each work type, and the head account share. The page opens with invented demo data.
+2. **Projects**: one row per BRTC payment (amount, VAT, expenses). Press **Team** on a row to say who worked on it and who was Head. A **Spreadsheet** layout shows every column at once. Or use **Import / export** to load the Google Form response sheet (`.xlsx`/`.csv`) by dropping the file in, or paste rows from a spreadsheet.
+3. **Results**: amount per person (with each person's share of the total), the split of every payment, and the per-person-per-project tables. Warnings link straight to the row to fix. Print it, or download Excel or CSV.
 
 Your work is saved automatically in the browser. Use **Save everything as a JSON file** to keep a copy of each period or to move to another computer.
 
